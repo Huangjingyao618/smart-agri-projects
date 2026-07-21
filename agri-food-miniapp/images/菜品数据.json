@@ -1,0 +1,251 @@
+{
+    "previewTableName": "",
+    "publishCacheStatus": "ready",
+    "subType": "database",
+    "schema": {
+        "x-primary-column": "_id",
+        "x-kind": "tcb",
+        "x-defaultMethods": [
+            "wedaCreate",
+            "wedaUpdate",
+            "wedaDelete",
+            "wedaGetItem",
+            "wedaGetRecords",
+            "wedaGetList",
+            "wedaBatchCreate",
+            "wedaBatchUpdate",
+            "wedaBatchDelete"
+        ],
+        "type": "object",
+        "x-relatedType": "exist",
+        "x-viewId": "view-80rv4hniio",
+        "required": [],
+        "properties": {
+            "owner": {
+                "default": "",
+                "x-system": true,
+                "x-id": "b894eeb",
+                "name": "owner",
+                "format": "father-son",
+                "pattern": "",
+                "x-hidden": true,
+                "type": "string",
+                "title": "所有人",
+                "x-index": 10,
+                "x-unique": false,
+                "x-parent": {
+                    "fatherAction": "judge",
+                    "type": "father-son",
+                    "parentDataSourceName": "sys_user"
+                }
+            },
+            "_mainDep": {
+                "x-system": true,
+                "x-id": "7967e9d",
+                "name": "_mainDep",
+                "format": "father-son",
+                "x-hidden": true,
+                "type": "string",
+                "title": "所属主管部门",
+                "x-index": 11,
+                "x-unique": false,
+                "x-parent": {
+                    "fatherAction": "judge",
+                    "type": "father-son",
+                    "parentDataSourceName": "sys_department"
+                }
+            },
+            "image": {
+                "x-image-size": 5242880,
+                "x-required": false,
+                "x-keyPath": "",
+                "x-id": "114af939",
+                "format": "x-image",
+                "description": "",
+                "type": "string",
+                "x-index": 4,
+                "title": "菜品图片",
+                "x-storage-type": "cloudID",
+                "x-unique": false,
+                "maxLength": 1024
+            },
+            "createdAt": {
+                "default": 0,
+                "x-system": true,
+                "x-id": "694baaa",
+                "format": "datetime",
+                "type": "number",
+                "title": "创建时间",
+                "x-index": 12,
+                "x-unique": false
+            },
+            "createBy": {
+                "default": "",
+                "x-system": true,
+                "x-id": "a30e024",
+                "name": "createBy",
+                "format": "father-son",
+                "pattern": "",
+                "x-hidden": true,
+                "type": "string",
+                "title": "创建人",
+                "x-index": 13,
+                "x-unique": false,
+                "x-parent": {
+                    "fatherAction": "judge",
+                    "type": "father-son",
+                    "parentDataSourceName": "sys_user"
+                }
+            },
+            "updateBy": {
+                "default": "",
+                "x-system": true,
+                "x-id": "93a079a",
+                "name": "updateBy",
+                "format": "father-son",
+                "pattern": "",
+                "x-hidden": true,
+                "type": "string",
+                "title": "修改人",
+                "x-index": 14,
+                "x-unique": false,
+                "x-parent": {
+                    "fatherAction": "judge",
+                    "type": "father-son",
+                    "parentDataSourceName": "sys_user"
+                }
+            },
+            "price": {
+                "x-required": false,
+                "x-keyPath": "",
+                "x-id": "89fa2c86",
+                "format": "",
+                "numberCount": 2,
+                "description": "",
+                "type": "number",
+                "x-index": 6,
+                "title": "菜品价格",
+                "minimum": 0,
+                "x-unique": false
+            },
+            "_openid": {
+                "default": "",
+                "x-system": true,
+                "x-id": "a263755",
+                "name": "_openid",
+                "format": "",
+                "pattern": "",
+                "description": "仅微信云开发下使用",
+                "type": "string",
+                "title": "记录创建者",
+                "x-index": 15,
+                "x-unique": false
+            },
+            "name": {
+                "x-required": false,
+                "x-keyPath": "",
+                "x-id": "261c838d",
+                "format": "",
+                "description": "",
+                "type": "string",
+                "x-index": 2,
+                "title": "菜品名称",
+                "x-unique": false,
+                "maxLength": 256
+            },
+            "typeId": {
+                "x-keyPath": "",
+                "x-logical": false,
+                "x-id": "8889d96d",
+                "format": "many-one",
+                "description": "",
+                "type": "object",
+                "x-index": 10,
+                "title": "分类",
+                "list": [
+                    {
+                        "x-id": "8889d96d_parent_ds",
+                        "name": "ai_orders_types",
+                        "pId": "8889d96d",
+                        "x-middle-info": true,
+                        "title": "关联模型标识",
+                        "type": "string"
+                    },
+                    {
+                        "x-id": "uqhznn8x",
+                        "name": "_id",
+                        "pId": "8889d96d",
+                        "title": "数据标识",
+                        "type": "string"
+                    }
+                ],
+                "x-unique": false,
+                "required": [],
+                "x-parent": {
+                    "parentFieldKey": "b",
+                    "parentFieldTitle": "a",
+                    "parentDataSourceName": "ai_orders_types"
+                },
+                "x-required": true,
+                "name": "typeId",
+                "deleteWay": "doNothing",
+                "properties": {
+                    "_id": {
+                        "name": "_id",
+                        "title": "数据标识",
+                        "type": "string"
+                    }
+                }
+            },
+            "_id": {
+                "x-system": true,
+                "x-id": "62005e1",
+                "format": "",
+                "type": "string",
+                "title": "数据标识",
+                "x-index": 16,
+                "x-unique": true
+            },
+            "sku": {
+                "x-required": false,
+                "x-keyPath": "",
+                "x-id": "6142ddf2",
+                "format": "",
+                "description": "",
+                "type": "string",
+                "x-index": 8,
+                "title": "菜品规格",
+                "x-unique": false,
+                "maxLength": 256
+            },
+            "updatedAt": {
+                "default": 0,
+                "x-system": true,
+                "x-id": "4203fe1",
+                "format": "datetime",
+                "type": "number",
+                "title": "更新时间",
+                "x-index": 17,
+                "x-unique": false
+            }
+        }
+    },
+    "dbInstanceType": "FLEXDB",
+    "title": "菜品",
+    "prodDbInfo": null,
+    "stagingSwitch": false,
+    "name": "ai_orders_goods",
+    "dataHubName": "flexdb",
+    "dbLinkType": "internal",
+    "tableNameRule": "only_name",
+    "type": "database",
+    "previewDbInfo": null,
+    "updateTime": "2026-04-20T15:53:47",
+    "publishedTableName": "ai_orders_goods",
+    "id": "data-5xkHMzvvL",
+    "dbSourceType": "internal_flexdb",
+    "methods": [],
+    "fun": "{\"onlineVersion\": 4, \"previewVersion\": 3, \"onlinePublishAt\": 1776700394671, \"prviewPublishAt\": 1776700392139}",
+    "publishStatus": 1,
+    "configuration": {}
+}
