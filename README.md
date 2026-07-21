@@ -9,7 +9,7 @@ smart-agri-projects/
 ├── stm32-hardware/         # 🔧 STM32F103C8T6 硬件端代码
 │   ├── User/
 │   │   ├── main.c          # 主程序: DHT11采集 + ESP8266通信 + OLED显示
-│   │   ├── esp8266.c/h     # WiFi连接 + MQTT协议栈手动实现 (CONNECT/SUBSCRIBE/PUBLISH)
+│   │   ├── esp8266.c/h     # WiFi连接 + MQTT协议栈 (CONNECT/SUBSCRIBE/PUBLISH)
 │   │   ├── DHT11.c/h       # DHT11温湿度传感器驱动
 │   │   └── stm32f10x_it.c  # 中断服务
 │   ├── Hardware/           # 外设驱动 (LED/OLED/Buzzer/Key)
@@ -29,7 +29,7 @@ smart-agri-projects/
 ## 技术栈
 
 - **硬件**: STM32F103C8T6 + DHT11 + ESP8266
-- **通信**: MQTT 协议 (手写报文构造)
+- **通信**: MQTT 协议 
 - **云平台**: 中国移动 OneNET IoT
 - **应用**: 微信小程序原生开发
 
