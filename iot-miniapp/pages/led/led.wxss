@@ -1,0 +1,131 @@
+/* 页面容器 */
+.page-container {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #E3F2FD 0%, #F0F4F8 30%);
+  padding: 32rpx;
+  box-sizing: border-box;
+}
+
+/* 连接状态栏 */
+.status-bar {
+  display: flex;
+  align-items: center;
+  padding: 16rpx 32rpx;
+  background: #FFFFFF;
+  border-radius: 12rpx;
+  margin-bottom: 32rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+}
+
+.status-dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  margin-right: 16rpx;
+}
+
+.status-dot.connected {
+  background: #4CAF50;
+}
+
+.status-dot.disconnected {
+  background: #F44336;
+}
+
+.status-text {
+  font-size: 24rpx;
+  color: #4E5969;
+}
+
+/* 控制卡片 */
+.control-card {
+  background: #FFFFFF;
+  border-radius: 16rpx;
+  padding: 32rpx;
+  box-shadow: 0 2rpx 12rpx rgba(0, 0, 0, 0.08);
+  margin-bottom: 24rpx;
+}
+
+.led-title {
+  font-size: 32rpx;
+  font-weight: 600;
+  color: #1D2129;
+  display: block;
+  margin-bottom: 16rpx;
+}
+
+.led-desc {
+  font-size: 24rpx;
+  color: #86909C;
+  display: block;
+  margin-bottom: 32rpx;
+}
+
+.led-status {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24rpx;
+}
+
+.led-indicator {
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 50%;
+  margin-right: 16rpx;
+}
+
+.led-indicator.on {
+  background: #4CAF50;
+  box-shadow: 0 0 16rpx rgba(76, 175, 80, 0.5);
+}
+
+.led-indicator.off {
+  background: #BDBDBD;
+}
+
+.led-state-text {
+  font-size: 28rpx;
+  color: #4E5969;
+}
+
+/* 按钮 */
+.toggle-btn {
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 48rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #FFFFFF;
+  border: none;
+  text-align: center;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.toggle-btn::after {
+  border: none;
+}
+
+.toggle-btn.on-btn {
+  background: #4CAF50;
+}
+
+.toggle-btn.off-btn {
+  background: #1976D2;
+}
+
+.toggle-btn:active {
+  opacity: 0.9;
+  transform: scale(0.98);
+}
+
+/* 提示 */
+.tips {
+  display: block;
+  text-align: center;
+  font-size: 22rpx;
+  color: #86909C;
+  margin-top: 32rpx;
+  padding: 0 32rpx;
+}

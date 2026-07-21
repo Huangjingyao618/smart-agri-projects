@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/monitor/monitor",
+    "pages/led/led"
+  ],
+  "lazyCodeLoading": "requiredComponents",
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#1976D2",
+    "navigationBarTitleText": "OneNET 监控",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#86909C",
+    "selectedColor": "#1976D2",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/monitor/monitor",
+        "text": "数据监控"
+      },
+      {
+        "pagePath": "pages/led/led",
+        "text": "LED控制"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

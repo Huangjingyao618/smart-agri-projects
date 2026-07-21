@@ -1,0 +1,118 @@
+@use '@/styles/variables.scss' as *;
+
+.pageContainer {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #e3f2fd 0%, $color-bg-page 30%);
+  padding: $spacing-lg $page-padding;
+  box-sizing: border-box;
+}
+
+/* 连接状态栏 */
+.statusBar {
+  @include flex-center;
+  justify-content: flex-start;
+  padding: $spacing-sm $spacing-lg;
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  margin-bottom: $spacing-lg;
+  box-shadow: $shadow-card;
+
+  .statusDot {
+    width: 16rpx;
+    height: 16rpx;
+    border-radius: $radius-round;
+    margin-right: $spacing-sm;
+    &.connected {
+      background: $color-success;
+    }
+    &.disconnected {
+      background: $color-error;
+    }
+  }
+
+  .statusText {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+  }
+}
+
+/* 控制卡片 */
+.controlCard {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  box-shadow: $shadow-card;
+  margin-bottom: $spacing-md;
+}
+
+.ledTitle {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-bottom: $spacing-sm;
+}
+
+.ledDesc {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  margin-bottom: $spacing-lg;
+}
+
+.ledStatus {
+  display: flex;
+  align-items: center;
+  margin-bottom: $spacing-md;
+
+  .ledIndicator {
+    width: 24rpx;
+    height: 24rpx;
+    border-radius: $radius-round;
+    margin-right: $spacing-sm;
+    &.on {
+      background: $color-led-on;
+      box-shadow: 0 0 16rpx rgba(76, 175, 80, 0.5);
+    }
+    &.off {
+      background: $color-led-off;
+    }
+  }
+
+  .ledStateText {
+    font-size: $font-size-md;
+    color: $color-text-secondary;
+  }
+}
+
+/* LED 开关按钮 - 使用胶囊形状 */
+.toggleBtn {
+  @include button-reset;
+  width: 100%;
+  height: $button-height-md;
+  border-radius: $radius-button;
+  font-size: $font-size-md;
+  font-weight: $font-weight-medium;
+  color: $color-text-white;
+  transition: all $transition-base;
+
+  &:active {
+    opacity: 0.9;
+    transform: scale(0.98);
+  }
+
+  &.onBtn {
+    background: $color-led-on;
+  }
+
+  &.offBtn {
+    background: $color-primary;
+  }
+}
+
+/* 提示信息 */
+.tips {
+  text-align: center;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  margin-top: $spacing-lg;
+  padding: 0 $spacing-lg;
+}

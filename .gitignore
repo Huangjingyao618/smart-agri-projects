@@ -1,0 +1,3 @@
+# Sensitive config
+project.private.config.json
+*.private.config.*

@@ -1,0 +1,39 @@
+<!-- LED 控制页 -->
+<view class="page-container">
+  <!-- 连接状态栏 -->
+  <view class="status-bar">
+    <view class="status-dot {{connectStatus === 'connected' ? 'connected' : 'disconnected'}}"></view>
+    <text class="status-text">{{connectStatus === 'connected' ? '设备已连接' : '设备未连接，无法控制'}}</text>
+  </view>
+
+  <!-- LED1 控制卡片 -->
+  <view class="control-card">
+    <text class="led-title">LED1 指示灯</text>
+    <text class="led-desc">{{deviceData.LED1 ? '当前状态：开启 - 点击按钮关闭' : '当前状态：关闭 - 点击按钮开启'}}</text>
+    <view class="led-status">
+      <view class="led-indicator {{deviceData.LED1 ? 'on' : 'off'}}"></view>
+      <text class="led-state-text">{{deviceData.LED1 ? '已开启' : '已关闭'}}</text>
+    </view>
+    <button class="toggle-btn {{deviceData.LED1 ? 'on-btn' : 'off-btn'}}" bindtap="handleToggleLED1">
+      {{deviceData.LED1 ? '关闭 LED1' : '开启 LED1'}}
+    </button>
+  </view>
+
+  <!-- LED2 控制卡片 -->
+  <view class="control-card">
+    <text class="led-title">LED2 指示灯</text>
+    <text class="led-desc">{{deviceData.LED2 ? '当前状态：开启 - 点击按钮关闭' : '当前状态：关闭 - 点击按钮开启'}}</text>
+    <view class="led-status">
+      <view class="led-indicator {{deviceData.LED2 ? 'on' : 'off'}}"></view>
+      <text class="led-state-text">{{deviceData.LED2 ? '已开启' : '已关闭'}}</text>
+    </view>
+    <button class="toggle-btn {{deviceData.LED2 ? 'on-btn' : 'off-btn'}}" bindtap="handleToggleLED2">
+      {{deviceData.LED2 ? '关闭 LED2' : '开启 LED2'}}
+    </button>
+  </view>
+
+  <!-- 提示信息 -->
+  <text class="tips">
+    通过 OneNET 云平台下发命令，控制 STM32 开发板上的 LED 灯亮灭
+  </text>
+</view>

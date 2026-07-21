@@ -1,0 +1,159 @@
+@use '@/styles/variables.scss' as *;
+
+.pageContainer {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #e3f2fd 0%, $color-bg-page 30%);
+  padding: $spacing-lg $page-padding;
+  box-sizing: border-box;
+}
+
+/* 连接状态栏 */
+.statusBar {
+  @include flex-center;
+  justify-content: flex-start;
+  padding: $spacing-sm $spacing-lg;
+  background: $color-bg-card;
+  border-radius: $radius-md;
+  margin-bottom: $spacing-md;
+  box-shadow: $shadow-card;
+
+  .statusDot {
+    width: 16rpx;
+    height: 16rpx;
+    border-radius: $radius-round;
+    margin-right: $spacing-sm;
+    &.connected {
+      background: $color-success;
+    }
+    &.connecting {
+      background: $color-warning;
+      animation: pulse 1.5s ease-in-out infinite;
+    }
+    &.disconnected {
+      background: $color-error;
+    }
+    &.error {
+      background: $color-error;
+    }
+  }
+
+  .statusText {
+    font-size: $font-size-sm;
+    color: $color-text-secondary;
+  }
+
+  .reconnectBtn {
+    margin-left: auto;
+    padding: 8rpx 24rpx;
+    background: $color-primary;
+    color: $color-text-white;
+    border-radius: $radius-sm;
+    font-size: $font-size-xs;
+  }
+}
+
+/* 数据卡片 */
+.dataCards {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: $spacing-md;
+  gap: $spacing-md;
+}
+
+.dataCard {
+  flex: 1;
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  box-shadow: $shadow-card;
+  text-align: center;
+
+  .cardIcon {
+    font-size: $font-size-xxl;
+    margin-bottom: $spacing-sm;
+  }
+
+  .cardLabel {
+    font-size: $font-size-sm;
+    color: $color-text-tertiary;
+    margin-bottom: $spacing-sm;
+  }
+
+  .cardValue {
+    font-size: 64rpx;
+    font-weight: $font-weight-bold;
+    line-height: $line-height-tight;
+  }
+
+  .cardUnit {
+    font-size: $font-size-md;
+    font-weight: $font-weight-normal;
+    margin-left: 4rpx;
+  }
+
+  &.tempCard .cardValue {
+    color: $color-temp;
+  }
+  &.humiCard .cardValue {
+    color: $color-humidity;
+  }
+}
+
+/* LED 状态速览 */
+.ledOverview {
+  background: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  box-shadow: $shadow-card;
+  margin-bottom: $spacing-md;
+
+  .sectionTitle {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-semibold;
+    color: $color-text-primary;
+    margin-bottom: $spacing-md;
+  }
+
+  .ledRow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: $spacing-sm 0;
+
+    &:not(:last-child) {
+      border-bottom: 1rpx solid $color-divider;
+    }
+  }
+
+  .ledLabel {
+    font-size: $font-size-md;
+    color: $color-text-secondary;
+  }
+
+  .ledBadge {
+    padding: 6rpx 24rpx;
+    border-radius: $radius-sm;
+    font-size: $font-size-xs;
+    color: $color-text-white;
+    &.on {
+      background: $color-led-on;
+    }
+    &.off {
+      background: $color-led-off;
+    }
+  }
+}
+
+/* 更新时间 */
+.updateTime {
+  text-align: center;
+  font-size: $font-size-xs;
+  color: $color-text-tertiary;
+  margin-top: $spacing-md;
+}
+
+/* 脉动动画 */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
