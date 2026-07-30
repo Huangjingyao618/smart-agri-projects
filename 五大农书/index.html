@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="五大农书科普网站 - 探索中国古代农学智慧">
+    <title>五大农书 · 探索千年农耕智慧</title>
+    <link rel="stylesheet" type="text/css" href="css/gongyong.css">
+    <link rel="stylesheet" type="text/css" href="css/shouye.css">
+    <link rel="stylesheet" href="./font/iconfont.css">
+    <script src="./js/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a class="nav-items active" href="./index.html">首页</a>
+                <a class="nav-items" href="./xihan.html">氾胜之书</a>
+                <a class="nav-items" href="./beiwei.html">齐民要术</a>
+                <a class="nav-items" href="./song.html">陈旉农书</a>
+                <a class="nav-items" href="./yuan.html">王桢农书</a>
+                <a class="nav-items" href="./ming.html">农政全书</a>
+                <a class="nav-items" href="./data.html">数据中心</a>
+            </nav>
+        </header>
+
+        <!-- Banner 区域 -->
+        <section class="banner">
+            <div class="banner-bg"></div>
+            <div class="banner-content">
+                <div class="banner-text">
+                    <h1 class="banner-title">五大农书</h1>
+                    <p class="banner-subtitle">探索千年农耕智慧 · 传承中华农业文明</p>
+                    <p class="banner-desc">西汉至明代，五部农学巨著，见证中国古代农业科技的辉煌成就</p>
+                    <div class="banner-buttons">
+                        <a href="#books" class="btn">开始探索</a>
+                        <a href="./data.html" class="btn btn-outline">查看数据</a>
+                    </div>
+                </div>
+                <div class="banner-clock">
+                    <div class="clock-container">
+                        <div class="clock-face">
+                            <div class="clock-hour" id="clockHour"></div>
+                            <div class="clock-center-dot"></div>
+                            <div class="clock-ring"></div>
+                        </div>
+                        <div class="clock-label" id="clockLabel">西汉</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Banner 底部指示器 -->
+            <div class="banner-indicator">
+                <a href="#books" class="scroll-down">
+                    <span>向下滚动</span>
+                    <i class="iconfont">&#xe63d;</i>
+                </a>
+            </div>
+        </section>
+
+        <!-- 五大农书卡片区域 -->
+        <section id="books" class="books-section">
+            <h2 class="page-title">五大经典农书</h2>
+            <p class="section-desc">点击卡片了解每部农书的详细内容</p>
+            
+            <div class="books-grid">
+                <div class="book-card" data-era="西汉">
+                    <div class="book-header" style="background: linear-gradient(135deg, #d4a76a, #b8925a);">
+                        <span class="book-era">西汉</span>
+                    </div>
+                    <div class="book-body">
+                        <h3 class="book-name">《氾胜之书》</h3>
+                        <p class="book-author">作者：氾胜之</p>
+                        <p class="book-intro">西汉农学宝典，中国古代农业科技的开山之作，总结了深耕、施肥、区田法等创新技术。</p>
+                        <div class="book-stats">
+                            <span>📅 公元前1世纪</span>
+                            <span>🔧 30+ 技术</span>
+                        </div>
+                        <a href="./xihan.html" class="btn btn-small">查看详情</a>
+                    </div>
+                </div>
+
+                <div class="book-card" data-era="北魏">
+                    <div class="book-header" style="background: linear-gradient(135deg, #b8925a, #8a6d3b);">
+                        <span class="book-era">北魏</span>
+                    </div>
+                    <div class="book-body">
+                        <h3 class="book-name">《齐民要术》</h3>
+                        <p class="book-author">作者：贾思勰</p>
+                        <p class="book-intro">中国古代农业百科全书，系统总结北方农业生产技术，涵盖种植、畜牧、加工等。</p>
+                        <div class="book-stats">
+                            <span>📅 公元533-544年</span>
+                            <span>🔧 50+ 技术</span>
+                        </div>
+                        <a href="./beiwei.html" class="btn btn-small">查看详情</a>
+                    </div>
+                </div>
+
+                <div class="book-card" data-era="宋">
+                    <div class="book-header" style="background: linear-gradient(135deg, #c89040, #a07830);">
+                        <span class="book-era">南宋</span>
+                    </div>
+                    <div class="book-body">
+                        <h3 class="book-name">《陈旉农书》</h3>
+                        <p class="book-author">作者：陈旉</p>
+                        <p class="book-intro">南方水稻种植技术总结，强调精耕细作和水利管理，江南农业智慧结晶。</p>
+                        <div class="book-stats">
+                            <span>📅 公元1149年</span>
+                            <span>🔧 40+ 技术</span>
+                        </div>
+                        <a href="./song.html" class="btn btn-small">查看详情</a>
+                    </div>
+                </div>
+
+                <div class="book-card" data-era="元">
+                    <div class="book-header" style="background: linear-gradient(135deg, #6b8e4e, #4d6b38);">
+                        <span class="book-era">元朝</span>
+                    </div>
+                    <div class="book-body">
+                        <h3 class="book-name">《王桢农书》</h3>
+                        <p class="book-author">作者：王祯</p>
+                        <p class="book-intro">南北农业技术结合，图文并茂，古代农民的实用指南，农具技术集大成者。</p>
+                        <div class="book-stats">
+                            <span>📅 公元1313年</span>
+                            <span>🔧 60+ 技术</span>
+                        </div>
+                        <a href="./yuan.html" class="btn btn-small">查看详情</a>
+                    </div>
+                </div>
+
+                <div class="book-card" data-era="明">
+                    <div class="book-header" style="background: linear-gradient(135deg, #d4a76a, #c89040);">
+                        <span class="book-era">明朝</span>
+                    </div>
+                    <div class="book-body">
+                        <h3 class="book-name">《农政全书》</h3>
+                        <p class="book-author">作者：徐光启</p>
+                        <p class="book-intro">中国古代农业科学的集大成之作，融合中西科技，涵盖农业各领域。</p>
+                        <div class="book-stats">
+                            <span>📅 公元1639年</span>
+                            <span>🔧 80+ 技术</span>
+                        </div>
+                        <a href="./ming.html" class="btn btn-small">查看详情</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 时代时间线 -->
+        <section class="timeline-section">
+            <h2 class="page-title">历史时间线</h2>
+            <p class="section-desc">五大农书的历史演进轨迹</p>
+            
+            <div class="timeline">
+                <div class="timeline-item" style="--item-color: #d4a76a; margin-left: 0%;">
+                    <div class="timeline-content">
+                        <span class="timeline-date">公元前1世纪</span>
+                        <h4>《氾胜之书》</h4>
+                        <p>西汉 · 氾胜之</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item" style="--item-color: #b8925a; margin-left: 20%;">
+                    <div class="timeline-content">
+                        <span class="timeline-date">公元533-544年</span>
+                        <h4>《齐民要术》</h4>
+                        <p>北魏 · 贾思勰</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item" style="--item-color: #c89040; margin-left: 40%;">
+                    <div class="timeline-content">
+                        <span class="timeline-date">公元1149年</span>
+                        <h4>《陈旉农书》</h4>
+                        <p>南宋 · 陈旉</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item" style="--item-color: #6b8e4e; margin-left: 60%;">
+                    <div class="timeline-content">
+                        <span class="timeline-date">公元1313年</span>
+                        <h4>《王桢农书》</h4>
+                        <p>元朝 · 王祯</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+                <div class="timeline-item" style="--item-color: #d4a76a; margin-left: 80%;">
+                    <div class="timeline-content">
+                        <span class="timeline-date">公元1639年</span>
+                        <h4>《农政全书》</h4>
+                        <p>明朝 · 徐光启</p>
+                    </div>
+                    <div class="timeline-dot"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 特色展示 -->
+        <section class="features-section">
+            <h2 class="page-title">网站特色</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📚</div>
+                    <h3>科普解读</h3>
+                    <p>通俗易懂的语言解读古老农书，让千年智慧触手可及</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>数据可视化</h3>
+                    <p>多维度数据图表，直观呈现五大农书的历史价值与贡献</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎬</div>
+                    <h3>多媒体体验</h3>
+                    <p>视频、音频、动画相结合，沉浸式学习古代农业文化</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌱</div>
+                    <h3>实用价值</h3>
+                    <p>古代智慧与现代农业对照，探索传统科技的现代意义</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="footer">
+            <div class="footer-content">
+                <h3>五大农书 · 科普网站</h3>
+                <p>探索千年农耕智慧，传承中华农业文明</p>
+                <p style="margin-top: 15px; font-size: 12px; opacity: 0.7;">© 2026 五大农书科普网站 | 首页</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/index.js" type="text/javascript" charset="UTF-8"></script>
+</body>
+</html>

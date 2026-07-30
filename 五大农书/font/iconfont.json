@@ -1,0 +1,37 @@
+{
+  "id": "4898839",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "1305406",
+      "name": "上",
+      "font_class": "shang",
+      "unicode": "e63c",
+      "unicode_decimal": 58940
+    },
+    {
+      "icon_id": "1305407",
+      "name": "下",
+      "font_class": "xia",
+      "unicode": "e63d",
+      "unicode_decimal": 58941
+    },
+    {
+      "icon_id": "36553635",
+      "name": "分针",
+      "font_class": "fenzhen",
+      "unicode": "e7da",
+      "unicode_decimal": 59354
+    },
+    {
+      "icon_id": "9874475",
+      "name": "KHCFDC_点击",
+      "font_class": "dianji",
+      "unicode": "e6ca",
+      "unicode_decimal": 59082
+    }
+  ]
+}

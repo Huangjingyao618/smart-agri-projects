@@ -1,0 +1,417 @@
+/* 农书详情页统一样式 - 温馨淡黄色主题 */
+
+/* 页面头部 */
+.book-page-header {
+    padding: 140px 20px 60px;
+    text-align: center;
+    background: var(--gradient-warm);
+    border-bottom: 3px solid var(--color-accent);
+    position: relative;
+}
+
+.book-page-header::after {
+    content: "";
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 6px;
+    background: var(--gradient-nav);
+    border-radius: 3px;
+}
+
+.book-header-title {
+    font-family: var(--font-title);
+    font-size: 48px;
+    color: var(--color-text);
+    margin-bottom: 15px;
+}
+
+.book-header-author {
+    font-size: 18px;
+    color: var(--color-accent-dark);
+    margin-bottom: 10px;
+}
+
+.book-header-era {
+    display: inline-block;
+    background: var(--gradient-nav);
+    color: var(--color-text-inverse);
+    padding: 6px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.book-header-desc {
+    max-width: 700px;
+    margin: 15px auto 0;
+    font-size: 16px;
+    color: var(--color-text-light);
+    line-height: 1.8;
+}
+
+/* 概览统计 */
+.book-stats-overview {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.book-stat-item {
+    background: var(--color-primary-light);
+    border-radius: 16px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 2px solid transparent;
+    position: relative;
+}
+
+.book-stat-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background: var(--gradient-nav);
+    border-radius: 0 0 4px 4px;
+}
+
+.book-stat-item:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+}
+
+.book-stat-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.book-stat-number {
+    font-family: var(--font-title);
+    font-size: 36px;
+    color: var(--color-accent-dark);
+    font-weight: 700;
+    line-height: 1;
+}
+
+.book-stat-label {
+    font-size: 13px;
+    color: var(--color-text-light);
+    margin-top: 8px;
+}
+
+/* 主要内容区 */
+.book-content-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.book-section-title {
+    font-family: var(--font-title);
+    font-size: 32px;
+    color: var(--color-text);
+    margin-bottom: 30px;
+    padding-left: 20px;
+    border-left: 5px solid var(--color-accent);
+}
+
+/* 作者简介 */
+.author-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    background: var(--color-primary-light);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 40px;
+}
+
+.author-video {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.author-video video {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+}
+
+.author-info h2 {
+    font-family: var(--font-title);
+    font-size: 28px;
+    color: var(--color-accent-dark);
+    margin-bottom: 10px;
+}
+
+.author-info .author-name {
+    font-size: 20px;
+    color: var(--color-text);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.author-info p {
+    color: var(--color-text);
+    line-height: 2;
+    margin-bottom: 15px;
+    text-indent: 2em;
+}
+
+/* 背景简介 */
+.background-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    background: var(--color-primary-light);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 40px;
+}
+
+.background-gallery {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+}
+
+.gallery-image {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    transition: opacity 0.5s ease;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(74, 55, 40, 0.7);
+    opacity: 0;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.background-gallery:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-controls {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.gallery-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.gallery-btn.active {
+    background: var(--color-accent);
+    transform: scale(1.2);
+}
+
+.gallery-prev,
+.gallery-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(74, 55, 40, 0.7);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    z-index: 10;
+}
+
+.gallery-prev { left: 15px; }
+.gallery-next { right: 15px; }
+
+.gallery-prev:hover,
+.gallery-next:hover {
+    background: var(--color-accent-dark);
+}
+
+.background-info h2 {
+    font-family: var(--font-title);
+    font-size: 28px;
+    color: var(--color-accent-dark);
+    margin-bottom: 20px;
+}
+
+.background-info p {
+    color: var(--color-text);
+    line-height: 2;
+    margin-bottom: 15px;
+    text-indent: 2em;
+}
+
+/* 核心技术展示 */
+.tech-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tech-carousel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.tech-card {
+    background: var(--color-primary-light);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid rgba(212, 167, 106, 0.2);
+}
+
+.tech-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.tech-card-header {
+    background: var(--gradient-nav);
+    color: var(--color-text-inverse);
+    padding: 20px 25px;
+}
+
+.tech-card-header h3 {
+    font-family: var(--font-title);
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.tech-card-header .tech-tag {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.tech-card-body {
+    padding: 25px;
+}
+
+.tech-card-body p {
+    color: var(--color-text);
+    line-height: 1.9;
+    text-indent: 2em;
+    font-size: 15px;
+}
+
+/* 页面导航卡片 */
+.nav-cards-section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.nav-card {
+    background: var(--color-primary-light);
+    padding: 30px 20px;
+    border-radius: 16px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--color-text);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 2px solid transparent;
+}
+
+.nav-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-accent);
+}
+
+.nav-card .nav-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.nav-card h4 {
+    font-family: var(--font-title);
+    font-size: 18px;
+    color: var(--color-accent-dark);
+    margin-bottom: 5px;
+}
+
+.nav-card span {
+    font-size: 13px;
+    color: var(--color-text-light);
+}
+
+/* 响应式 */
+@media (max-width: 768px) {
+    .book-header-title {
+        font-size: 32px;
+    }
+    
+    .author-section,
+    .background-section {
+        grid-template-columns: 1fr;
+        padding: 25px;
+    }
+    
+    .book-section-title {
+        font-size: 24px;
+    }
+    
+    .tech-carousel {
+        grid-template-columns: 1fr;
+    }
+}

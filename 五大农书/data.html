@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化 - 五大农书</title>
+    <link rel="stylesheet" type="text/css" href="css/gongyong.css">
+    <link rel="stylesheet" type="text/css" href="css/data.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <a class="nav-items" href="./index.html">首页</a>
+                <a class="nav-items" href="./xihan.html">氾胜之书</a>
+                <a class="nav-items" href="./beiwei.html">齐民要术</a>
+                <a class="nav-items" href="./song.html">陈旉农书</a>
+                <a class="nav-items" href="./yuan.html">王桢农书</a>
+                <a class="nav-items" href="./ming.html">农政全书</a>
+                <a class="nav-items active">数据中心</a>
+            </nav>
+        </header>
+
+        <div class="page-header">
+            <h1 class="page-title">五大农书 · 数据可视化</h1>
+            <p class="page-subtitle">以数据视角探索中国古代农学瑰宝</p>
+        </div>
+
+        <!-- 概览统计 -->
+        <section class="overview-section">
+            <div class="stat-cards">
+                <div class="stat-card">
+                    <div class="stat-icon">📚</div>
+                    <div class="stat-number" data-target="5">0</div>
+                    <div class="stat-label">经典农书</div>
+                    <div class="stat-desc">西汉至明代</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🛠️</div>
+                    <div class="stat-number" data-target="240">0</div>
+                    <div class="stat-label">农业技术</div>
+                    <div class="stat-desc">传承千年智慧</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🌾</div>
+                    <div class="stat-number" data-target="80">0</div>
+                    <div class="stat-label">涉及作物</div>
+                    <div class="stat-desc">粮食与经济作物</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⏳</div>
+                    <div class="stat-number" data-target="2000">0</div>
+                    <div class="stat-label">历史影响(年)</div>
+                    <div class="stat-desc">传承至今</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">📖</div>
+                    <div class="stat-number" data-target="120">0</div>
+                    <div class="stat-label">引用书籍</div>
+                    <div class="stat-desc">后世农书引用</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🏆</div>
+                    <div class="stat-number" data-target="95">0</div>
+                    <div class="stat-label">现代应用率(%)</div>
+                    <div class="stat-desc">仍具参考价值</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 图表区域 -->
+        <section class="charts-section">
+            <!-- 第一行：雷达图 + 柱状图 -->
+            <div class="chart-row">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h2 class="chart-title">📊 综合实力雷达图</h2>
+                        <p class="chart-desc">五维指标对比分析</p>
+                    </div>
+                    <div id="radarChart" class="chart-container"></div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h2 class="chart-title">📈 核心技术数量对比</h2>
+                        <p class="chart-desc">各农书收录技术统计</p>
+                    </div>
+                    <div id="barChart" class="chart-container"></div>
+                </div>
+            </div>
+
+            <!-- 第二行：时间线 + 作物分布 -->
+            <div class="chart-row">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h2 class="chart-title">📅 历史时间轴</h2>
+                        <p class="chart-desc">五大农书成书年代与影响范围</p>
+                    </div>
+                    <div id="timelineChart" class="chart-container"></div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h2 class="chart-title">🌱 涉及作物分布</h2>
+                        <p class="chart-desc">各农书记载作物类型</p>
+                    </div>
+                    <div id="pieChart" class="chart-container"></div>
+                </div>
+            </div>
+
+            <!-- 第三行：影响时长 + 章节对比 -->
+            <div class="chart-row">
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h2 class="chart-title">⏱️ 历史影响时长</h2>
+                        <p class="chart-desc">各农书对后世影响年限</p>
+                    </div>
+                    <div id="impactChart" class="chart-container"></div>
+                </div>
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <h2 class="chart-title">📝 章节篇幅对比</h2>
+                        <p class="chart-desc">各农书的内容规模</p>
+                    </div>
+                    <div id="chapterChart" class="chart-container"></div>
+                </div>
+            </div>
+
+            <!-- 第四行：知识领域分布 -->
+            <div class="chart-row single">
+                <div class="chart-card full-width">
+                    <div class="chart-header">
+                        <h2 class="chart-title">🎯 知识领域覆盖分析</h2>
+                        <p class="chart-desc">各农书在不同农学领域的覆盖深度</p>
+                    </div>
+                    <div id="heatmapChart" class="chart-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 数据详情表格 -->
+        <section class="detail-section">
+            <h2 class="section-title">📋 详细数据对比表</h2>
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>农书名称</th>
+                            <th>作者</th>
+                            <th>朝代</th>
+                            <th>成书年代</th>
+                            <th>核心技术数</th>
+                            <th>涉及作物</th>
+                            <th>章节数</th>
+                            <th>影响年限</th>
+                            <th>后世引用</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>《氾胜之书》</td>
+                            <td>氾胜之</td>
+                            <td>西汉</td>
+                            <td>公元前1世纪</td>
+                            <td>30+</td>
+                            <td>10余种</td>
+                            <td>18篇</td>
+                            <td>2000+年</td>
+                            <td>50+部</td>
+                        </tr>
+                        <tr>
+                            <td>《齐民要术》</td>
+                            <td>贾思勰</td>
+                            <td>北魏</td>
+                            <td>公元533-544年</td>
+                            <td>50+</td>
+                            <td>20余种</td>
+                            <td>10卷92篇</td>
+                            <td>1500+年</td>
+                            <td>100+部</td>
+                        </tr>
+                        <tr>
+                            <td>《陈旉农书》</td>
+                            <td>陈旉</td>
+                            <td>南宋</td>
+                            <td>公元1149年</td>
+                            <td>40+</td>
+                            <td>15余种</td>
+                            <td>3卷</td>
+                            <td>800+年</td>
+                            <td>60+部</td>
+                        </tr>
+                        <tr>
+                            <td>《王桢农书》</td>
+                            <td>王祯</td>
+                            <td>元朝</td>
+                            <td>公元1313年</td>
+                            <td>60+</td>
+                            <td>25余种</td>
+                            <td>37卷</td>
+                            <td>700+年</td>
+                            <td>80+部</td>
+                        </tr>
+                        <tr>
+                            <td>《农政全书》</td>
+                            <td>徐光启</td>
+                            <td>明朝</td>
+                            <td>公元1639年</td>
+                            <td>80+</td>
+                            <td>30余种</td>
+                            <td>60卷</td>
+                            <td>400+年</td>
+                            <td>120+部</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- 数据说明 -->
+        <section class="note-section">
+            <div class="note-card">
+                <h3>💡 数据说明</h3>
+                <p>本页所有数据基于历史文献研究整理，部分统计为估算值，仅供参考。</p>
+                <p>数据来源：中国农业科学院、中国农业历史学会相关研究成果。</p>
+            </div>
+        </section>
+
+        <div class="footer">
+            <div class="footer-content">
+                <h3>五大农书 · 科普网站</h3>
+                <p>探索千年农耕智慧，传承中华农业文明</p>
+                <p style="margin-top: 15px; font-size: 12px; opacity: 0.7;">© 2026 五大农书科普网站 | 数据可视化中心</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+</body>
+</html>
