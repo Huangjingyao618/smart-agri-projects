@@ -72,20 +72,6 @@
 
 ---
 
-## 🖼️ 运行截图
-
-> *(运行截图占位 — 请替换为实际拍摄的实验照片)*
->
-> ![LED流水灯实验](./images/led-experiment.jpg)
-> *3-2 LED流水灯实验*
->
-> ![OLED显示实验](./images/oled-experiment.jpg)
-> *4-1 OLED 显示中文/图形*
->
-> ![PWM舵机实验](./images/servo-experiment.jpg)
-> *6-4 PWM 驱动舵机*
-
----
 
 ## 🔗 关联项目
 

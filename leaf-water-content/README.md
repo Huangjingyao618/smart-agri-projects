@@ -92,21 +92,15 @@ python exercise2.py
 ## 👤 我的角色
 
 - 独立完成两个练习的全部代码编写
-- Exercise 1：设计自动识别数据起始行的健壮算法（通过特征值 "0.349445" 定位），支持批量处理
-- Exercise 2：实现 5 种模型的统一评估框架 (`evaluate_model` + `tune_and_evaluate`)，代码高度模块化
-- 输出完整的图表报告（特征重要性 + 残差图），适用于学术论文插图
+- Exercise 1：通过特征值匹配自动定位数据起始行，支持批量处理
+- Exercise 2：实现 5 种模型的统一评估框架 (`evaluate_model` + `tune_and_evaluate`)，代码模块化组织
+- 输出完整的图表报告（特征重要性 + 残差图，300dpi）
 
 ---
 
 ## 🖼️ 运行截图
 
-> *(运行截图占位 — 请替换为实际输出图表)*
->
-> ![残差图示例](./images/residual-plot.png)
-> *某模型的残差图 — 残差随机分布在 0 轴两侧，模型拟合良好*
->
-> ![特征重要性](./images/feature-importance.png)
-> *RandomForest 特征重要性 — 各波段对含水量的贡献度*
+> 详见于(./images)
 
 ---
 
